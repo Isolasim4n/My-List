@@ -1,13 +1,17 @@
 package id.sch.smktelkom_mlg.project.xirpl308172635.my_list;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
 
+    public static final int REQUEST_CODE_ADD = 88;
     private TabLayout tabLayout;
 
     private ViewPager viewPager;
@@ -16,6 +20,14 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goAdd();
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -28,12 +40,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         viewPager = (ViewPager) findViewById(R.id.pager);
-        new ViewPager.SimpleOnPageChangeListener() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-            }
-        };
+
 
 
         Pager adapter = new Pager(getSupportFragmentManager(), tabLayout.getTabCount());
@@ -43,6 +50,14 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout.setOnTabSelectedListener(this);
 
     }
+
+    private void goAdd() {
+        startActivityForResult(new Intent(this, InputActivity.class), REQUEST_CODE_ADD);
+    }
+
+
+
+
 
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
@@ -57,5 +72,10 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     @Override
     public void onTabReselected(TabLayout.Tab tab) {
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
