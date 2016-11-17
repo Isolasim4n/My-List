@@ -1,6 +1,7 @@
 package id.sch.smktelkom_mlg.project.xirpl308172635.my_list;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -12,14 +13,17 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
 
     public static final int REQUEST_CODE_ADD = 88;
+    dbJadwal dbjadwal;
     private TabLayout tabLayout;
-
     private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dbjadwal = new dbJadwal(this);
+        SQLiteDatabase sqLiteDatabase = dbjadwal.getWritableDatabase();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
