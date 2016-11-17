@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project.xirpl308172635.my_list;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -8,14 +9,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 public class InputActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
+    dbtugas dbTugas;
+    dbJadwal dbjadwal;
     private TabLayout tabLayout;
-
     private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
+
+        dbjadwal = new dbJadwal(this);
+        SQLiteDatabase sqLiteDatabase = dbjadwal.getWritableDatabase();
+
+        dbTugas = new dbtugas(this);
+        SQLiteDatabase sqLiteDatabase1 = dbTugas.getWritableDatabase();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
