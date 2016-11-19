@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
     public static final int REQUEST_CODE_ADD = 88;
     dbJadwal dbjadwal;
+    dbtugas dbTugas;
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
         dbjadwal = new dbJadwal(this);
         SQLiteDatabase sqLiteDatabase = dbjadwal.getWritableDatabase();
+
+        dbTugas = new dbtugas(this);
+        SQLiteDatabase sqLiteDatabase1 = dbTugas.getWritableDatabase();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
