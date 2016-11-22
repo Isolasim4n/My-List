@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
@@ -11,43 +12,7 @@
     tools:context="id.sch.smktelkom_mlg.project.xirpl308172635.my_list.InputActivity">
 
 
-    <ImageButton
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:src="@drawable/ic_cloud_black_24dp" />
 
-    <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/ic_cloud_circle_black_24dp" />
-
-    <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="right"
-        android:src="@drawable/ic_cloud_done_black_24dp" />
-
-    <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_cloud_download_black_24dp" />
-
-    <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_cloud_off_black_24dp" />
-
-    <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/ic_cloud_upload_black_24dp" />
-
-    <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/ic_cloud_queue_black_24dp" />
 
 
 </android.support.v7.widget.RecyclerView>
