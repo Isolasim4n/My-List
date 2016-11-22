@@ -49,4 +49,5 @@
         android:layout_margin="16dp"
         android:src="@android:drawable/ic_dialog_email"
         app:srcCompat="@drawable/ic_control_point_black_24dp" />
+
 </android.support.design.widget.CoordinatorLayout>
