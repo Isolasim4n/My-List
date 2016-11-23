@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".InputActivity" />
-        <activity android:name=".tugas.CreateData"></activity>
+        <activity android:name=".tugas.CreateData" />
+        <activity android:name=".tugas.CreateDatatugas"></activity>
     </application>
 
 </manifest>

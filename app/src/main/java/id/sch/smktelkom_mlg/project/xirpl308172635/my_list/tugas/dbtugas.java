@@ -20,7 +20,7 @@ public class dbtugas extends SQLiteOpenHelper {
     public static final String HARI = "hari_pengumpulan";
     public static final String TANGGAL = "tanggal_pengumpulan";
     public static final String WAKTU = "waktu_pengumpulan";
-    private static final String DATABASE_NAME = "mylist";
+    private static final String DATABASE_NAME = "mylisttugas";
     private static final int DATABASE_VERSION = 1;
     private static final String DROP_TABLE = "DROP TABLE  IF EXISTS " + TABLE_NAME;
     //Membuat database

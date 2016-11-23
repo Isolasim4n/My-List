@@ -17,7 +17,7 @@ public class InputTugas extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.inputtugas, container, false);
+        return inflater.inflate(R.layout.activity_create_datatugas, container, false);
 
 
     }
