@@ -7,12 +7,16 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+
+import id.sch.smktelkom_mlg.project.xirpl308172635.my_list.tugas.dbtugas;
 
 public class InputActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
     dbtugas dbTugas;
     dbJadwal dbjadwal;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private Button bTambah;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,4 +69,5 @@ public class InputActivity extends AppCompatActivity implements TabLayout.OnTabS
     public void onTabReselected(TabLayout.Tab tab) {
 
     }
+
 }

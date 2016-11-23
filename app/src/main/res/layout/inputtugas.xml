@@ -32,7 +32,7 @@
         android:text="Judul" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/etjudul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -63,7 +63,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -79,7 +79,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/etTanggal"
+        android:id="@+id/ettime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -87,7 +87,7 @@
         android:textSize="12sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_tambah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="simpan" />

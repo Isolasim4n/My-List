@@ -7,6 +7,7 @@
     android:fitsSystemWindows="true"
     tools:context="id.sch.smktelkom_mlg.project.xirpl308172635.my_list.MainActivity">
 
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"

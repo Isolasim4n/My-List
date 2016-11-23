@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import id.sch.smktelkom_mlg.project.xirpl308172635.my_list.tugas.InputTugas;
+
 /**
  * Created by WINDOWS 8.1 on 17/11/2016.
  */

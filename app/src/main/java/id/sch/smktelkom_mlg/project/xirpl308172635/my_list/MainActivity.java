@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import id.sch.smktelkom_mlg.project.xirpl308172635.my_list.tugas.dbtugas;
+
 public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
 
     public static final int REQUEST_CODE_ADD = 88;
