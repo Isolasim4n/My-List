@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import id.sch.smktelkom_mlg.project.xirpl308172635.my_list.R;
 
@@ -34,12 +35,27 @@ public class CreateData extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         String judul = null;
-        String deksripsi = null;
+        String deskripsi = null;
         String tanggal = null;
         String waktu = null;
+        @SuppressWarnings("unused")
 
-
-        if (ejudul.getText() != null && edeskripsi.getText() != null && etanggal != null && ewaktu != null)
-            ;
+        Tugas tugas = null;
+        if (ejudul.getText() != null && edeskripsi.getText() != null && etanggal != null && ewaktu != null) {
+            judul = ejudul.getText().toString();
+            deskripsi = edeskripsi.getText().toString();
+            tanggal = etanggal.getText().toString();
+            waktu = ewaktu.getText().toString();
+        }
+        switch (v.getId()) {
+            case R.id.button_tambah:
+                tugas = dataSource.createTugas(judul, deskripsi, tanggal, waktu);
+                Toast.makeText(this, "Tugas baru\n" +
+                        "judul : " + tugas.getNama_tugas() + "\n" +
+                        "deskripsi : " + tugas.getDesk_tugas() + "\n" +
+                        "tanggal pengumpulan : " + tugas.getTanggal_tugas() + "\n" +
+                        "waktu pengerjaan : " + tugas.getWaktu_tugas(), Toast.LENGTH_LONG).show();
+                break;
+        }
     }
 }

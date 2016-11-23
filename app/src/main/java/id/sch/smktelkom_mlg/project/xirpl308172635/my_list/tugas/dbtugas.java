@@ -14,13 +14,13 @@ import id.sch.smktelkom_mlg.project.xirpl308172635.my_list.db_message;
 public class dbtugas extends SQLiteOpenHelper {
 
     public static final String DESKRIPSI = "deskripsi";
+    public static final String TABLE_NAME = "tb_tugas";
+    public static final String UID = "no";
+    public static final String JUDUL = "judul";
+    public static final String HARI = "hari_pengumpulan";
+    public static final String TANGGAL = "tanggal_pengumpulan";
+    public static final String WAKTU = "waktu_pengumpulan";
     private static final String DATABASE_NAME = "mylist";
-    private static final String TABLE_NAME = "tb_tugas";
-    private static final String UID = "no";
-    private static final String JUDUL = "judul";
-    private static final String HARI = "hari_pengumpulan";
-    private static final String TANGGAL = "tanggal_pengumpulan";
-    private static final String WAKTU = "waktu_pengumpulan";
     private static final int DATABASE_VERSION = 1;
     private static final String DROP_TABLE = "DROP TABLE  IF EXISTS " + TABLE_NAME;
     //Membuat database
