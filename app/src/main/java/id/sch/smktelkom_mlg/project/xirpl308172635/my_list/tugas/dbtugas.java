@@ -62,4 +62,6 @@ public class dbtugas extends SQLiteOpenHelper {
             db_message.message(context, "" + e);
         }
     }
+
+
 }

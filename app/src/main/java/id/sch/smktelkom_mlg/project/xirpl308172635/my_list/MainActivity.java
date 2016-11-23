@@ -20,10 +20,12 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         dbjadwal = new dbJadwal(this);
         SQLiteDatabase sqLiteDatabase = dbjadwal.getWritableDatabase();
@@ -59,7 +61,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
         tabLayout.setOnTabSelectedListener(this);
 
+
     }
+
 
     private void goAdd() {
         startActivityForResult(new Intent(this, InputActivity.class), REQUEST_CODE_ADD);
