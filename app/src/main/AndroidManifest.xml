@@ -15,9 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InputActivity" />
-        <activity android:name=".tugas.CreateData" />
-        <activity android:name=".tugas.CreateDatatugas"></activity>
-    </application>
-
+        <activity android:name=".Tugas.Tugasku" />
+        <activity android:name=".Jadwal.Jadwalku" />
+        <activity android:name=".Tugas.CreateData"></activity>
+    <meta-data
+        android:name="DATABASE"
+        android:value="db_My-List.db" />
+    <meta-data
+        android:name="VERSION"
+        android:value="1" />
+    <meta-data
+        android:name="QUERY_LOG"
+        android:value="true" />
+    <meta-data
+        android:name="DOMAIN_PACKAGE_NAME"
+        android:value="com.kelompok9.My-List" />
+</application>
 </manifest>
