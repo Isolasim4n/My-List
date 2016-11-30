@@ -35,14 +35,32 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabTugas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:clickable="true"
         app:fabSize="mini"
-        app:srcCompat="@drawable/ic_add_black_24dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:id="@+id/fabTugas" />
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/appbar"
+        android:text="Tampilkan tugas " />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnView">
+
+    </ListView>
 
 </RelativeLayout>

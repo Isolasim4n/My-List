@@ -3,11 +3,24 @@
     package="id.sch.smktelkom_mlg.project.xirpl308172635.my_list">
 
     <application
+        android:name="com.orm.SugarApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="DATABASE"
+            android:value="db_mylist" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="id.sch.smktelkom_mlg.project.xirpl308172635.my_list" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,17 +31,6 @@
         <activity android:name=".Tugas.Tugasku" />
         <activity android:name=".Jadwal.Jadwalku" />
         <activity android:name=".Tugas.CreateData"></activity>
-    <meta-data
-        android:name="DATABASE"
-        android:value="db_My-List.db" />
-    <meta-data
-        android:name="VERSION"
-        android:value="1" />
-    <meta-data
-        android:name="QUERY_LOG"
-        android:value="true" />
-    <meta-data
-        android:name="DOMAIN_PACKAGE_NAME"
-        android:value="com.kelompok9.My-List" />
-</application>
+
+    </application>
 </manifest>

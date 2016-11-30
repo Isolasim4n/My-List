@@ -111,10 +111,11 @@
             android:textSize="12sp" />
 
         <Button
-            android:text="Simpan"
+            android:id="@+id/Simpan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Simpan" />
+            android:onClick="onClick"
+            android:text="Simpan" />
 
     </LinearLayout>
 </ScrollView>

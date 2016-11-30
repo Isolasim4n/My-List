@@ -17,6 +17,7 @@ public class CreateData extends AppCompatActivity {
     TabLayout tabLayout;
     Button bsimpan;
     EditText etjudul,etdeskripsi,ettanggal_pengumpulan,etwaktu_pengumpulan;
+    dbtugas db_tugas = new dbtugas();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,39 +41,21 @@ public class CreateData extends AppCompatActivity {
         bsimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertData();
+
+                String judul = etjudul.getText().toString();
+                String deskripsi = etdeskripsi.getText().toString();
+                int tanggal_pengumpulan = Integer.parseInt(ettanggal_pengumpulan.getText().toString());
+                int waktu_pengumpulan = Integer.parseInt(etwaktu_pengumpulan.getText().toString());
+
+                db_tugas = new dbtugas(judul, deskripsi, tanggal_pengumpulan, waktu_pengumpulan);
+                db_tugas.save(); //Fungsi untuk insert data
+
+                Toast.makeText(getApplicationContext(), "Tugas : " + db_tugas, Toast.LENGTH_LONG).show();
             }
         });
 
-
-
-
-
     }
 
-    private void insertData() {
-        String judul            = etjudul.getText().toString();
-        String deskripsi        = etdeskripsi.getText().toString();
-        int tanggal_pengumpulan = Integer.parseInt(ettanggal_pengumpulan.getText().toString());
-        int waktu_pengumpulan   = Integer.parseInt(etwaktu_pengumpulan.getText().toString());
-
-
-        if(judul != null ){
-            if(deskripsi != null){
-                if(tanggal_pengumpulan != 0){
-                    if(waktu_pengumpulan != 0){
-                        db_tugas db = new db_tugas(judul,deskripsi,tanggal_pengumpulan,waktu_pengumpulan);
-                        db.save();
-                        Toast.makeText(CreateData.this,"Tugas "+judul+"Berhasil ditambahkan", Toast.LENGTH_SHORT).show();
-                    }else{
-                        etwaktu_pengumpulan.setError("Harap isikan waktu pengumpulan tugas anda");}
-                }else {
-                ettanggal_pengumpulan.setError("Harap isikan tanggal pengumpulan tugas anda");}
-            }else {
-            etdeskripsi.setError("Harap isikan deskripsi dari tugas anda");}
-        }else {
-        etjudul.setError("Harap isikan judul tugas anda");}
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -84,4 +67,6 @@ public class CreateData extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
