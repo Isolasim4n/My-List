@@ -20,4 +20,12 @@ public class dbtugas extends SugarRecord {
         this.waktu_pengumpulan = waktu_pengumpulan;
     }
 
+    @Override
+    public String toString() {
+        return "" +
+                "judul='" + judul + '\'' +
+                ", deskripsi='" + deskripsi + '\'' +
+                ", tanggal_pengumpulan=" + tanggal_pengumpulan +
+                ", waktu_pengumpulan=" + waktu_pengumpulan;
+    }
 }
